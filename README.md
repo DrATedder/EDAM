@@ -32,7 +32,7 @@ python3 centrifuge_env_decontam.py [sample_folder] [contaminent_folder] [metadat
 3.    centrifugeReport.txt: used by the programme to identify the correct files within the given directory
 4.    underscores ('_') must be used between file name elements as these are used for splitting file names
 
-**Metadata format:** Metadata should be in two column CSV format as shown below (example can be downloaded [here](/example/decontamination_metadata_example.csv)). The first column should contain the sequence 'shortname' for each file you want to process, and the second column should contain the sequence 'shortname' for the contaminant file. 
+**Metadata format:** Metadata should be in two column CSV format as shown below (example can be downloaded [here](/examples/decontamination_metadata_example.csv)). The first column should contain the sequence 'shortname' for each file you want to process, and the second column should contain the sequence 'shortname' for the contaminant file. 
 
 >[!Note]
 >If either file (sample or contaminent) is in the metadata but not in the directories given, they will be ignored. 
