@@ -3,8 +3,12 @@
 ***
 A pipeline to remove environmental contaminants from ancient metagenomic samples using an OTU classification approach. Full details of the pipeline can be found in [Dahlquist-Axe *et al*. (2024)]().
 
+[Basic usage](https://github.com/DrATedder/EDAM/edit/main/README.md#basic-usage)
+
 ## Basic usage
 `EDAM` assumes you have used `centrifuge` (see [here](https://github.com/DaehwanKimLab/centrifuge) for details) to assign OTUs to your reads, and that subsequent processes will be be based on `centrifugeReport.txt` type output files.
+>[!NOTE]
+>Basic usage assumes that you have specific 'contaminant' reads that have been through the `centrifuge` OTU assignment protocol. If you do **NOT** have environmental 'blanks' associated with your sampling, it is recommended to use one of the packaged 'standard' lists (see below).
 
 ```bash
 python3 centrifuge_env_decontam.py [sample_folder] [contaminent_folder] [metadata_file] [tax_level]
@@ -24,7 +28,10 @@ python3 centrifuge_env_decontam.py [sample_folder] [contaminent_folder] [metadat
 3.    centrifugeReport.txt: used by the programme to identify the correct files within the given directory
 4.    underscores ('_') must be used between file name elements as these are used for splitting file names
 
-**Metadata format:** Metadata should be in two column CSV format as shown below (example can be downloaded [here](https://github.com/DrATedder/ancient_metagenomics/blob/42e6d56453cc1c63e0ee8885aeb0acfc4acc42d1/decontamination_metadata_example.csv "Decontaminant metadata example file")). The first column should contain the sequence 'shortname' for each file you want to process, and the second column should contain the sequence 'shortname' for the contaminant file. **Note.** If either file (sample or contaminent) is in the metadata but not in the directories given, they will be ignored. 
+**Metadata format:** Metadata should be in two column CSV format as shown below (example can be downloaded [here](https://github.com/DrATedder/ancient_metagenomics/blob/42e6d56453cc1c63e0ee8885aeb0acfc4acc42d1/decontamination_metadata_example.csv "Decontaminant metadata example file")). The first column should contain the sequence 'shortname' for each file you want to process, and the second column should contain the sequence 'shortname' for the contaminant file. 
+
+>[!Note]
+>If either file (sample or contaminent) is in the metadata but not in the directories given, they will be ignored. 
 
 |sample|contaminent|
 |---|---|
@@ -44,3 +51,6 @@ python3 centrifuge_env_decontam.py [sample_folder] [contaminent_folder] [metadat
 
 **Output files:** Output file, still in 'centrifugeReport.txt' format will be output into the directory containing the samples. File names will have been appended in the following way:
 > shortname_anything_<tax_level>_decontam_centrifugeReoprt.txt
+
+>[!NOTE]
+>Some text
