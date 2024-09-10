@@ -56,5 +56,9 @@ python3 centrifuge_env_decontam.py [sample_folder] [contaminent_folder] [metadat
 **Output files:** Output file, still in 'centrifugeReport.txt' format will be output into the directory containing the samples. File names will have been appended in the following way:
 > shortname_anything_<tax_level>_decontam_centrifugeReoprt.txt
 
->[!NOTE]
->Some text
+## Standard OTU lists
+While we recommend all ancient metagenomic experiements have suitable environmental 'blanks' to facilitate the decontamination process, we also recognise that this is not always possible. Under these conditions, we demonstrated in [Dahlquist-Axe *et al*. (2024)]() that using a 'standard list' of known environmental contaminants to decontaminate your ancient samples is able to produce diversity estimates that do not differ significantly from those generated with an appropriate environmental 'blank'. Please do read the paper for more specific details, and some discussion on how decontaminating with this method may impact the your results.
+>[!WARNING]
+>This method will work well if your testable question relates to defining Alpha & Beta diversity parameters. If you are interested in generating MAGs or doing additional subsequent analysis which requires reads to be removed from your `fastq` files, you may need to modify the proccess to suit your needs.
+
+
