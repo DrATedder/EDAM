@@ -5,7 +5,7 @@ A pipeline to remove environmental contaminants from ancient metagenomic samples
 
 [Basic usage](https://github.com/DrATedder/EDAM/blob/main/README.md#basic-usage)
 
-[Standard OTU lists]()
+[Standard OTU lists](https://github.com/DrATedder/EDAM/tree/main#standard-otu-lists)
 
 [Complete pipeline steps]()
 
