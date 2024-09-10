@@ -4,6 +4,8 @@
 A pipeline to remove environmental contaminants from ancient metagenomic samples using an OTU classification approach. Full details of the pipeline can be found in [Dahlquist-Axe *et al*. (2024)]().
 
 [Basic usage](https://github.com/DrATedder/EDAM/blob/main/README.md#basic-usage)
+[Standard OTU lists]()
+[Complete pipeline steps]()
 
 ## Basic usage
 `EDAM` assumes you have used `centrifuge` (see [here](https://github.com/DaehwanKimLab/centrifuge) for details) to assign OTUs to your reads, and that subsequent processes will be be based on `centrifugeReport.txt` type output files.
